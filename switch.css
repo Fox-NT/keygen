@@ -1,0 +1,89 @@
+.switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  width: 68px;
+  top: 50px;
+  right: 280px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.switch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.switch-text {
+  position: relative;
+  width: 100px;
+  margin-bottom: 10px;
+  color: #FFFAA8;
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.switch-label {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  background-color: #FFFAA8;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.switch-label:before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: 0px;
+  background: #808FC7;
+  position: absolute;
+  bottom: 0;
+  right: 36px;
+  border: 2px solid #E3E3E3;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.switch-checkbox:checked + .switch-label {
+  background-color: #808FC7;
+}
+
+.switch-checkbox:checked ~ .switch-text {
+  color: #808FC7;
+}
+
+.switch-checkbox:checked + .switch-label:before {
+  background: #ffffff;
+}
+
+.switch-checkbox:checked + .switch-label, .switch-checkbox:checked + .switch-label:before {
+  border-color: #808FC7;
+}
+
+.switch-checkbox:checked + .switch-label:before {
+  right: 0px;
+}
+/*# sourceMappingURL=switch.css.map */
